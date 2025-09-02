@@ -23,6 +23,13 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        "hero-bg": "hsl(var(--hero-bg))",
+        "text-primary": "hsl(var(--text-primary))",
+        "text-secondary": "hsl(var(--text-secondary))",
+        "text-muted": "hsl(var(--text-muted))",
+        "border-light": "hsl(var(--border-light))",
+        "card-custom": "hsl(var(--card-bg))",
+        "orange-star": "hsl(var(--orange-star))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
