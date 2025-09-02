@@ -164,49 +164,49 @@ const PartnerLogos = () => {
 // CTA Section with Testimonial
 const CTASection = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="py-12 sm:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-black">
+          <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-4 lg:space-y-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black">
                 Unlock Your Solar Sales Potential!
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-base sm:text-lg text-gray-700">
                 Transform your solar business with SolarMaps AI. Our innovative app streamlines lead generation and enhances your sales process. Don't miss out on maximizing your efficiency!
               </p>
-              <Button className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-3">
+              <Button className="bg-primary hover:bg-primary/90 text-white text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto">
                 Get Started Now
               </Button>
             </div>
 
             {/* Testimonial Card */}
-            <div className="p-6 border border-gray-300 rounded-lg bg-gray-50">
-              <div className="flex items-center gap-2 mb-4">
+            <div className="p-4 sm:p-6 border border-gray-300 rounded-lg bg-gray-50">
+              <div className="flex items-center gap-2 mb-3 sm:mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-7 h-7 fill-orange-400 text-orange-400" />
+                    <Star key={i} className="w-5 sm:w-7 h-5 sm:h-7 fill-orange-400 text-orange-400" />
                   ))}
                 </div>
-                <span className="text-lg font-semibold text-gray-900">5.0</span>
+                <span className="text-base sm:text-lg font-semibold text-gray-900">5.0</span>
               </div>
-              <p className="text-lg text-gray-700 mb-4">
+              <p className="text-base sm:text-lg text-gray-700 mb-3 sm:mb-4">
                 "SolarMaps AI has revolutionized our sales strategy!"
               </p>
               <div className="flex items-center gap-3">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/28960d0b9d4ff934f644859289b4b0f6434e4c5c?width=64"
                   alt="John Smith"
-                  className="w-8 h-8 rounded-full border border-gray-300"
+                  className="w-6 sm:w-8 h-6 sm:h-8 rounded-full border border-gray-300 flex-shrink-0"
                 />
-                <span className="text-lg text-black">John Smith, CEO of Solar Solutions</span>
+                <span className="text-sm sm:text-lg text-black">John Smith, CEO of Solar Solutions</span>
               </div>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="lg:order-last">
+          <div className="lg:order-last order-first lg:order-none">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/6665acf80bc7f4a12611ffeebd78d7ab8c061d11?width=1008"
               alt="SolarMaps Dashboard"
