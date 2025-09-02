@@ -486,34 +486,34 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
+    <section className="py-12 sm:py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-3 sm:mb-4">
             Your Questions Answered
           </h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-base sm:text-lg text-gray-700">
             Everything You Need to Know
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border border-gray-300 rounded-lg bg-gray-50">
               <button
-                className="w-full p-6 text-left flex justify-between items-center"
+                className="w-full p-4 sm:p-6 text-left flex justify-between items-start gap-4"
                 onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
               >
-                <span className="text-lg font-medium text-black">{faq.question}</span>
+                <span className="text-base sm:text-lg font-medium text-black text-left">{faq.question}</span>
                 <ChevronDown
-                  className={`w-7 h-7 text-gray-600 transition-transform ${
+                  className={`w-6 sm:w-7 h-6 sm:h-7 text-gray-600 transition-transform flex-shrink-0 mt-0.5 ${
                     openFAQ === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
               {openFAQ === index && faq.answer && (
-                <div className="px-6 pb-6">
-                  <p className="text-lg text-gray-700">{faq.answer}</p>
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
