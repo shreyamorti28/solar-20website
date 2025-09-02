@@ -386,57 +386,57 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="pricing" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
+    <section id="pricing" className="py-12 sm:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-3 sm:mb-4">
             Affordable Solar Solutions
           </h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-base sm:text-lg text-gray-700">
             Choose the perfect plan to power your solar sales efforts.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`p-6 border border-gray-300 rounded-xl ${
+              className={`p-4 sm:p-6 border border-gray-300 rounded-xl ${
                 plan.isPopular ? 'bg-gray-50' : 'bg-white'
               }`}
             >
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {/* Header */}
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="inline-block px-3 py-2 border border-gray-300 rounded-lg bg-white">
-                    <span className="text-lg font-semibold text-black">{plan.name}</span>
+                    <span className="text-base sm:text-lg font-semibold text-black">{plan.name}</span>
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-black">{plan.price}</span>
-                    <span className="text-lg text-gray-600">{plan.subtitle}</span>
+                    <span className="text-3xl sm:text-4xl font-bold text-black">{plan.price}</span>
+                    <span className="text-base sm:text-lg text-gray-600">{plan.subtitle}</span>
                   </div>
-                  <p className="text-lg text-gray-600">{plan.description}</p>
+                  <p className="text-base sm:text-lg text-gray-600">{plan.description}</p>
                 </div>
 
                 <hr className="border-gray-300" />
 
                 {/* Features */}
-                <div className="space-y-5">
+                <div className="space-y-4 sm:space-y-5">
                   {plan.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-white border border-green-300 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-white border border-green-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-4 sm:w-5 h-4 sm:h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <span className="text-lg text-black">{feature}</span>
+                      <span className="text-base sm:text-lg text-black leading-relaxed">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* CTA Button */}
                 <Button
-                  className={`w-full text-lg py-3 ${
+                  className={`w-full text-base sm:text-lg py-3 ${
                     plan.isPopular
                       ? 'bg-primary hover:bg-primary/90 text-white'
                       : 'bg-gray-50 border border-gray-300 text-black hover:bg-gray-100'
