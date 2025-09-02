@@ -161,6 +161,135 @@ const PartnerLogos = () => {
   );
 };
 
+// CTA Section with Testimonial
+const CTASection = () => {
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-black">
+                Unlock Your Solar Sales Potential!
+              </h2>
+              <p className="text-lg text-gray-700">
+                Transform your solar business with SolarMaps AI. Our innovative app streamlines lead generation and enhances your sales process. Don't miss out on maximizing your efficiency!
+              </p>
+              <Button className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-3">
+                Get Started Now
+              </Button>
+            </div>
+
+            {/* Testimonial Card */}
+            <div className="p-6 border border-gray-300 rounded-lg bg-gray-50">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-7 h-7 fill-orange-400 text-orange-400" />
+                  ))}
+                </div>
+                <span className="text-lg font-semibold text-gray-900">5.0</span>
+              </div>
+              <p className="text-lg text-gray-700 mb-4">
+                "SolarMaps AI has revolutionized our sales strategy!"
+              </p>
+              <div className="flex items-center gap-3">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/28960d0b9d4ff934f644859289b4b0f6434e4c5c?width=64"
+                  alt="John Smith"
+                  className="w-8 h-8 rounded-full border border-gray-300"
+                />
+                <span className="text-lg text-black">John Smith, CEO of Solar Solutions</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Image */}
+          <div className="lg:order-last">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/6665acf80bc7f4a12611ffeebd78d7ab8c061d11?width=1008"
+              alt="SolarMaps Dashboard"
+              className="w-full h-auto rounded-lg border border-gray-300"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Features Section
+const FeaturesSection = () => {
+  const features = [
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Lead Generation",
+      description: "Automate lead generation with AI-driven insights tailored for solar companies."
+    },
+    {
+      icon: <Sparkles className="w-6 h-6" />,
+      title: "Cold Calling",
+      description: "Leverage AI technology to enhance your cold calling efficiency and effectiveness."
+    },
+    {
+      icon: <Lock className="w-6 h-6" />,
+      title: "Appointment Scheduling",
+      description: "Seamlessly schedule appointments without the hassle, ensuring you never miss a lead."
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "CRM Integration",
+      description: "Sync leads effortlessly with Salesforce and HubSpot to streamline your sales workflow."
+    },
+    {
+      icon: <Moon className="w-6 h-6" />,
+      title: "User Management",
+      description: "Control user roles and permissions to optimize team collaboration and productivity."
+    },
+    {
+      icon: <Sun className="w-6 h-6" />,
+      title: "Customizable Dashboard",
+      description: "Enjoy a professional UI with a customizable dashboard to visualize leads and activity."
+    }
+  ];
+
+  return (
+    <section id="features" className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+            Transform Your Solar Sales Process
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-3">
+              Start Automating Today
+            </Button>
+            <Button
+              variant="outline"
+              className="text-lg px-8 py-3 bg-gray-50 border-gray-300 text-black hover:bg-gray-100"
+            >
+              Discover More Features
+            </Button>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center space-y-4">
+              <div className="w-10 h-10 mx-auto border border-gray-300 rounded-lg bg-white flex items-center justify-center">
+                {feature.icon}
+              </div>
+              <h3 className="text-lg font-semibold text-black">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // Main Index Component
 export default function Index() {
   return (
@@ -168,12 +297,14 @@ export default function Index() {
       <Navigation />
       <HeroSection />
       <PartnerLogos />
-      
+      <CTASection />
+      <FeaturesSection />
+
       {/* Placeholder for remaining sections */}
       <div className="py-16 bg-gray-50 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-lg text-gray-600">
-            Additional sections (CTA, Features, Testimonials, Pricing, FAQ, Footer) will be implemented next...
+            Additional sections (Testimonials, Pricing, FAQ, Footer) will be implemented next...
           </p>
         </div>
       </div>
