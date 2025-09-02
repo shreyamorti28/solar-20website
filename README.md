@@ -4,6 +4,9 @@ A pixel-perfect, fully responsive **SolarMaps AI landing page** built with **Rea
 
 ---
 
+## 🔗 Live Demo  
+👉 [View the live site here](https://mysolarpanel.netlify.app/) 
+
 ## ✅ Features  
 
 ### 🎯 Complete Implementation  
