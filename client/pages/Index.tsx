@@ -314,34 +314,34 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl lg:text-4xl font-bold text-center text-black mb-16">
+    <section id="testimonials" className="py-12 sm:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-black mb-12 sm:mb-16">
           What Our Users Say
         </h2>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="text-center space-y-6">
+            <div key={index} className="text-center space-y-4 sm:space-y-6">
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-16 h-16 mx-auto rounded-full border border-gray-300"
+                className="w-12 sm:w-16 h-12 sm:h-16 mx-auto rounded-full border border-gray-300"
               />
 
               <div className="flex justify-center">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-orange-400 text-orange-400" />
+                  <Star key={i} className="w-5 sm:w-6 h-5 sm:h-6 fill-orange-400 text-orange-400" />
                 ))}
               </div>
 
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed px-2">
                 "{testimonial.content}"
               </p>
 
               <div>
-                <p className="text-lg font-medium text-black">{testimonial.name}</p>
-                <p className="text-lg text-gray-400">{testimonial.role}</p>
+                <p className="text-base sm:text-lg font-medium text-black">{testimonial.name}</p>
+                <p className="text-base sm:text-lg text-gray-400">{testimonial.role}</p>
               </div>
             </div>
           ))}
