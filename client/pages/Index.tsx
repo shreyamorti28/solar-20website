@@ -527,7 +527,7 @@ const FAQSection = () => {
 // Footer Component
 const Footer = () => {
   return (
-    <footer className="relative bg-white overflow-hidden">
+    <footer id="contact" className="relative bg-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -538,33 +538,33 @@ const Footer = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-12">
+      <div className="relative z-10 py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
             {/* Left Column */}
-            <div>
-              <h3 className="text-3xl lg:text-4xl font-normal text-gray-900 mb-8 leading-tight">
+            <div className="md:col-span-2 lg:col-span-1">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-6 sm:mb-8 leading-tight">
                 Connect with SolarMaps Team
               </h3>
             </div>
 
             {/* Middle Column */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-6">SolarMaps Headquarters</h4>
-                <p className="text-xl text-gray-900 leading-relaxed">
+                <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-4 sm:mb-6">SolarMaps Headquarters</h4>
+                <p className="text-lg sm:text-xl text-gray-900 leading-relaxed">
                   123 Solar Street, Suite 100, Sunnytown, CA 90210. Phone: (123) 456-7890. We are here to help you succeed.
                 </p>
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">support@solarmaps.com</p>
+                <p className="text-lg sm:text-xl font-bold text-gray-900">support@solarmaps.com</p>
               </div>
             </div>
 
             {/* Right Column */}
-            <div className="space-y-6">
-              <h4 className="text-lg font-bold text-gray-900">Follow Us</h4>
-              <p className="text-xl text-gray-900 leading-relaxed">
+            <div className="space-y-4 sm:space-y-6">
+              <h4 className="text-base sm:text-lg font-bold text-gray-900">Follow Us</h4>
+              <p className="text-lg sm:text-xl text-gray-900 leading-relaxed">
                 Stay connected with us on our social media platforms for updates and tips. Join our community of solar enthusiasts. Let's revolutionize solar sales together!
               </p>
             </div>
