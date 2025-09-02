@@ -115,5 +115,35 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .hero-bg {
+    background-color: hsl(var(--hero-bg));
+  }
+
+  .text-primary {
+    color: hsl(var(--text-primary));
+  }
+
+  .text-secondary {
+    color: hsl(var(--text-secondary));
+  }
+
+  .text-muted {
+    color: hsl(var(--text-muted));
+  }
+
+  .border-light {
+    border-color: hsl(var(--border-light));
+  }
+
+  .bg-card-custom {
+    background-color: hsl(var(--card-bg));
+  }
+
+  .star-orange {
+    color: hsl(var(--orange-star));
+    fill: hsl(var(--orange-star));
   }
 }
