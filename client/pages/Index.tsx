@@ -223,65 +223,65 @@ const CTASection = () => {
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w-5 sm:w-6 h-5 sm:h-6" />,
       title: "Lead Generation",
       description: "Automate lead generation with AI-driven insights tailored for solar companies."
     },
     {
-      icon: <Sparkles className="w-6 h-6" />,
+      icon: <Sparkles className="w-5 sm:w-6 h-5 sm:h-6" />,
       title: "Cold Calling",
       description: "Leverage AI technology to enhance your cold calling efficiency and effectiveness."
     },
     {
-      icon: <Lock className="w-6 h-6" />,
+      icon: <Lock className="w-5 sm:w-6 h-5 sm:h-6" />,
       title: "Appointment Scheduling",
       description: "Seamlessly schedule appointments without the hassle, ensuring you never miss a lead."
     },
     {
-      icon: <Heart className="w-6 h-6" />,
+      icon: <Heart className="w-5 sm:w-6 h-5 sm:h-6" />,
       title: "CRM Integration",
       description: "Sync leads effortlessly with Salesforce and HubSpot to streamline your sales workflow."
     },
     {
-      icon: <Moon className="w-6 h-6" />,
+      icon: <Moon className="w-5 sm:w-6 h-5 sm:h-6" />,
       title: "User Management",
       description: "Control user roles and permissions to optimize team collaboration and productivity."
     },
     {
-      icon: <Sun className="w-6 h-6" />,
+      icon: <Sun className="w-5 sm:w-6 h-5 sm:h-6" />,
       title: "Customizable Dashboard",
       description: "Enjoy a professional UI with a customizable dashboard to visualize leads and activity."
     }
   ];
 
   return (
-    <section id="features" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+    <section id="features" className="py-12 sm:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4 sm:mb-6">
             Transform Your Solar Sales Process
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-3">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button className="bg-primary hover:bg-primary/90 text-white text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto">
               Start Automating Today
             </Button>
             <Button
               variant="outline"
-              className="text-lg px-8 py-3 bg-gray-50 border-gray-300 text-black hover:bg-gray-100"
+              className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-gray-50 border-gray-300 text-black hover:bg-gray-100 w-full sm:w-auto"
             >
               Discover More Features
             </Button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="text-center space-y-4">
-              <div className="w-10 h-10 mx-auto border border-gray-300 rounded-lg bg-white flex items-center justify-center">
+            <div key={index} className="text-center space-y-3 sm:space-y-4">
+              <div className="w-9 sm:w-10 h-9 sm:h-10 mx-auto border border-gray-300 rounded-lg bg-white flex items-center justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-semibold text-black">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-base sm:text-lg font-semibold text-black">{feature.title}</h3>
+              <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
             </div>
           ))}
         </div>
