@@ -141,20 +141,20 @@ const HeroSection = () => {
 // Partner Logos Component
 const PartnerLogos = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-2xl lg:text-3xl font-bold text-center text-black mb-12">
+    <section className="py-12 lg:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center text-black mb-8 lg:mb-12">
           Trusted Partners in Solar Innovation
         </h2>
-        
-        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-60">
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-8 opacity-60">
           {/* Partner logos - using placeholder divs for now since original logos might have licensing issues */}
-          <div className="h-12 w-32 bg-gray-300 rounded flex items-center justify-center text-sm font-semibold">VISA</div>
-          <div className="h-12 w-32 bg-gray-300 rounded flex items-center justify-center text-sm font-semibold">Google Pay</div>
-          <div className="h-12 w-32 bg-gray-300 rounded flex items-center justify-center text-sm font-semibold">Apple Pay</div>
-          <div className="h-12 w-32 bg-gray-300 rounded flex items-center justify-center text-sm font-semibold">PayPal</div>
-          <div className="h-12 w-32 bg-gray-300 rounded flex items-center justify-center text-sm font-semibold">Stripe</div>
-          <div className="h-12 w-32 bg-gray-300 rounded flex items-center justify-center text-sm font-semibold">Bitpay</div>
+          <div className="h-10 sm:h-12 bg-gray-300 rounded flex items-center justify-center text-xs sm:text-sm font-semibold">VISA</div>
+          <div className="h-10 sm:h-12 bg-gray-300 rounded flex items-center justify-center text-xs sm:text-sm font-semibold">Google Pay</div>
+          <div className="h-10 sm:h-12 bg-gray-300 rounded flex items-center justify-center text-xs sm:text-sm font-semibold">Apple Pay</div>
+          <div className="h-10 sm:h-12 bg-gray-300 rounded flex items-center justify-center text-xs sm:text-sm font-semibold">PayPal</div>
+          <div className="h-10 sm:h-12 bg-gray-300 rounded flex items-center justify-center text-xs sm:text-sm font-semibold">Stripe</div>
+          <div className="h-10 sm:h-12 bg-gray-300 rounded flex items-center justify-center text-xs sm:text-sm font-semibold">Bitpay</div>
         </div>
       </div>
     </section>
