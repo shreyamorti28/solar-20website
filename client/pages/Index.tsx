@@ -290,6 +290,291 @@ const FeaturesSection = () => {
   );
 };
 
+// Testimonials Section
+const TestimonialsSection = () => {
+  const testimonials = [
+    {
+      name: "Emily Carter",
+      role: "Sales Manager",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/6d23389ded3093a0ad230f0dfd549161b4e07880?width=128",
+      content: "The SolarMaps AI app has transformed our lead generation process. It's incredibly easy to use, and the automated calling feature has significantly improved our outreach efficiency. I can't imagine managing our solar sales without it!"
+    },
+    {
+      name: "Joshua Lee",
+      role: "Marketing Director",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/304ca4636fcc0e0b2500e6e1dd0fd98f5fdf57d2?width=128",
+      content: "Since integrating SolarMaps into our workflow, we've seen a 35% increase in our lead conversion rates. The seamless CRM sync has made tracking and managing leads a breeze. Highly recommend for any solar company!"
+    },
+    {
+      name: "Sofia Martinez",
+      role: "Operations Lead",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/e4bed1c91668bde3cdf0d02a873700bd591a5962?width=128",
+      content: "I love the dual mode feature! Whether I'm working late at night or during the day, I can switch modes to reduce eye strain. Plus, the appointment scheduling is super intuitive and saves me a lot of time."
+    }
+  ];
+
+  return (
+    <section id="testimonials" className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center text-black mb-16">
+          What Our Users Say
+        </h2>
+
+        <div className="grid lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="text-center space-y-6">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="w-16 h-16 mx-auto rounded-full border border-gray-300"
+              />
+
+              <div className="flex justify-center">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 fill-orange-400 text-orange-400" />
+                ))}
+              </div>
+
+              <p className="text-xl text-gray-700 leading-relaxed">
+                "{testimonial.content}"
+              </p>
+
+              <div>
+                <p className="text-lg font-medium text-black">{testimonial.name}</p>
+                <p className="text-lg text-gray-400">{testimonial.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Pricing Section
+const PricingSection = () => {
+  const plans = [
+    {
+      name: "Basic Package",
+      price: "$4",
+      subtitle: "$29.99/month",
+      description: "Ideal for individual solar salespersons",
+      features: [
+        "Automated lead generation",
+        "AI-powered cold calling",
+        "Appointment scheduling",
+        "Call history tracking",
+        "Light/Dark mode toggle"
+      ],
+      isPopular: false
+    },
+    {
+      name: "Pro Package",
+      price: "$12",
+      subtitle: "$99.99/month",
+      description: "Perfect for growing solar teams",
+      features: [
+        "Advanced CRM integration",
+        "Role management system",
+        "Enhanced call analytics",
+        "Customizable user dashboard",
+        "Team collaboration tools",
+        "Priority customer support"
+      ],
+      isPopular: true
+    }
+  ];
+
+  return (
+    <section id="pricing" className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
+            Affordable Solar Solutions
+          </h2>
+          <p className="text-lg text-gray-700">
+            Choose the perfect plan to power your solar sales efforts.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`p-6 border border-gray-300 rounded-xl ${
+                plan.isPopular ? 'bg-gray-50' : 'bg-white'
+              }`}
+            >
+              <div className="space-y-6">
+                {/* Header */}
+                <div className="space-y-4">
+                  <div className="inline-block px-3 py-2 border border-gray-300 rounded-lg bg-white">
+                    <span className="text-lg font-semibold text-black">{plan.name}</span>
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-bold text-black">{plan.price}</span>
+                    <span className="text-lg text-gray-600">{plan.subtitle}</span>
+                  </div>
+                  <p className="text-lg text-gray-600">{plan.description}</p>
+                </div>
+
+                <hr className="border-gray-300" />
+
+                {/* Features */}
+                <div className="space-y-5">
+                  {plan.features.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-white border border-green-300 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-lg text-black">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA Button */}
+                <Button
+                  className={`w-full text-lg py-3 ${
+                    plan.isPopular
+                      ? 'bg-primary hover:bg-primary/90 text-white'
+                      : 'bg-gray-50 border border-gray-300 text-black hover:bg-gray-100'
+                  }`}
+                  variant={plan.isPopular ? 'default' : 'outline'}
+                >
+                  {plan.isPopular ? 'Join the Pro Team' : 'Get Started Now'}
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// FAQ Section
+const FAQSection = () => {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(1); // Second FAQ open by default
+
+  const faqs = [
+    {
+      question: "What features does SolarMaps AI offer?",
+      answer: ""
+    },
+    {
+      question: "How does automated lead generation work?",
+      answer: "Automated lead generation in SolarMaps AI leverages advanced algorithms to identify potential customers interested in solar solutions. By analyzing various data points, the app generates high-quality leads, saving you time and improving your sales efficiency."
+    },
+    {
+      question: "Can I sync SolarMaps with my CRM?",
+      answer: "Absolutely! SolarMaps AI seamlessly integrates with popular CRM systems like Salesforce and HubSpot, allowing you to sync your leads effortlessly. This ensures that your sales team has access to all necessary information in one place, enhancing collaboration and productivity."
+    },
+    {
+      question: "Is there support for appointment scheduling?",
+      answer: "Yes! The app includes a user-friendly appointment scheduling feature that helps you organize meetings with potential clients effectively. You can easily set, manage, and track appointments right from your dashboard."
+    },
+    {
+      question: "What user roles can I manage?",
+      answer: "SolarMaps AI allows you to manage various user roles, including Salesperson, Admin, and Manager. This feature ensures that each team member has the appropriate access and permissions, facilitating better team management."
+    },
+    {
+      question: "How can I customize the app's appearance?",
+      answer: "Customization is simple with SolarMaps AI. You can toggle between light and dark modes according to your preference, ensuring a comfortable user experience that suits your working environment."
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
+            Your Questions Answered
+          </h2>
+          <p className="text-lg text-gray-700">
+            Everything You Need to Know
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div key={index} className="border border-gray-300 rounded-lg bg-gray-50">
+              <button
+                className="w-full p-6 text-left flex justify-between items-center"
+                onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+              >
+                <span className="text-lg font-medium text-black">{faq.question}</span>
+                <ChevronDown
+                  className={`w-7 h-7 text-gray-600 transition-transform ${
+                    openFAQ === index ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              {openFAQ === index && faq.answer && (
+                <div className="px-6 pb-6">
+                  <p className="text-lg text-gray-700">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Footer Component
+const Footer = () => {
+  return (
+    <footer className="relative bg-white overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="https://api.builder.io/api/v1/image/assets/TEMP/e6c1ec88e5c05c64096876ebeead1008065c9771?width=2400"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Left Column */}
+            <div>
+              <h3 className="text-3xl lg:text-4xl font-normal text-gray-900 mb-8 leading-tight">
+                Connect with SolarMaps Team
+              </h3>
+            </div>
+
+            {/* Middle Column */}
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-bold text-gray-900 mb-6">SolarMaps Headquarters</h4>
+                <p className="text-xl text-gray-900 leading-relaxed">
+                  123 Solar Street, Suite 100, Sunnytown, CA 90210. Phone: (123) 456-7890. We are here to help you succeed.
+                </p>
+              </div>
+              <div>
+                <p className="text-xl font-bold text-gray-900">support@solarmaps.com</p>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-bold text-gray-900">Follow Us</h4>
+              <p className="text-xl text-gray-900 leading-relaxed">
+                Stay connected with us on our social media platforms for updates and tips. Join our community of solar enthusiasts. Let's revolutionize solar sales together!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 // Main Index Component
 export default function Index() {
   return (
@@ -299,15 +584,10 @@ export default function Index() {
       <PartnerLogos />
       <CTASection />
       <FeaturesSection />
-
-      {/* Placeholder for remaining sections */}
-      <div className="py-16 bg-gray-50 text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <p className="text-lg text-gray-600">
-            Additional sections (Testimonials, Pricing, FAQ, Footer) will be implemented next...
-          </p>
-        </div>
-      </div>
+      <TestimonialsSection />
+      <PricingSection />
+      <FAQSection />
+      <Footer />
     </div>
   );
 }
