@@ -89,35 +89,35 @@ const Navigation = () => {
 // Hero Section Component
 const HeroSection = () => {
   return (
-    <section className="hero-bg py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="hero-bg py-12 sm:py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           {/* Large Logo */}
-          <div className="flex justify-center mb-8">
-            <SolarLogo className="w-11 h-11" />
+          <div className="flex justify-center mb-6 sm:mb-8">
+            <SolarLogo className="w-9 h-9 sm:w-11 sm:h-11" />
           </div>
 
           {/* Main Content */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 leading-tight">
+          <div className="max-w-4xl mx-auto mb-8 sm:mb-12">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-3 sm:mb-4 leading-tight px-2">
               Harness the Power of Solar Sales Automation
             </h1>
-            <p className="text-lg lg:text-xl text-black/80 mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-black/80 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
               Transform your solar business with cutting-edge AI tools that streamline lead generation and client interaction.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="outline" 
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+              <Button
+                variant="outline"
                 size="lg"
-                className="text-lg px-8 py-3 bg-gray-100 border-gray-300 text-black hover:bg-gray-200"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-gray-100 border-gray-300 text-black hover:bg-gray-200 w-full sm:w-auto"
               >
                 Discover More
               </Button>
-              <Button 
+              <Button
                 size="lg"
-                className="text-lg px-8 py-3 bg-primary hover:bg-primary/90 text-white"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-primary hover:bg-primary/90 text-white w-full sm:w-auto"
               >
                 Start Your Journey
               </Button>
@@ -125,9 +125,9 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="w-full max-w-5xl mx-auto">
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/d131264dd3fedd05b4865478fe77a01e528369f0?width=2400" 
+          <div className="w-full max-w-5xl mx-auto px-2 sm:px-0">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/d131264dd3fedd05b4865478fe77a01e528369f0?width=2400"
               alt="SolarMaps AI Dashboard"
               className="w-full h-auto rounded-lg shadow-2xl"
             />
